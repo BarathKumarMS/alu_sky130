@@ -139,8 +139,55 @@ The final implementation includes:
 
 ## Results
 
+The following images illustrate the major stages of the RTL-to-GDS implementation flow.
 
+### Floorplan
 
+The floorplanning stage defines the die and core dimensions, places the I/O pins, and generates the initial power distribution network.
+
+<p align="center">
+  <img src="images/floorplan.png" alt="Floorplan" width="700">
+</p>
+
+---
+
+### Placement
+
+Standard cells are placed within the core while optimizing area utilization and wirelength.
+
+<p align="center">
+  <img src="images/placement.png" alt="Placement" width="700">
+</p>
+
+---
+
+### Clock Tree Synthesis (CTS)
+
+Clock buffers are inserted to distribute the clock signal across all sequential elements while minimizing skew and insertion delay.
+
+<p align="center">
+  <img src="images/cts.png" alt="CTS" width="700">
+</p>
+
+---
+
+### Routing
+
+Signal interconnections are completed using global and detailed routing while satisfying design rule and timing constraints.
+
+<p align="center">
+  <img src="images/routing.png" alt="Routing" width="700">
+</p>
+
+---
+
+### Final GDSII Layout
+
+Final physical layout generated after signoff, ready for fabrication.
+
+<p align="center">
+  <img src="images/gdsII.png" alt="GDSII Layout" width="700">
+</p>
 
 ---
 
