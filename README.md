@@ -190,6 +190,10 @@ Final physical layout generated after signoff, ready for fabrication.
 </p>
 
 ---
+## Conclusion
+
+This project demonstrates the complete RTL-to-GDS implementation of a 5-bit ALU using the OpenLane ASIC flow and the SKY130 HD Open PDK. Starting from a synthesizable Verilog design, the implementation successfully progressed through synthesis, floorplanning, placement, clock tree synthesis, routing, static timing analysis, and physical verification, resulting in a manufacturable GDSII layout. The project provided practical experience with the open-source ASIC design flow and the analysis of implementation metrics such as area, timing, and physical verification.
+
 
 ## License
 
