@@ -1,0 +1,27 @@
+module alu_top (
+    input        clk,
+    input        rst,
+    input  [3:0] a,
+    input  [3:0] b,
+    input  [2:0] sel,
+    output reg [4:0] result
+);
+
+always @(posedge clk) begin
+    if (rst)
+        result <= 5'b0;
+    else begin
+        case(sel)
+            3'b000: result <= a + b;
+            3'b001: result <= a - b;
+            3'b010: result <= a & b;
+            3'b011: result <= a | b;
+            3'b100: result <= a ^ b;
+            3'b101: result <= ~(a & b);
+            3'b110: result <= a << 1;
+            3'b111: result <= a >> 1;
+        endcase
+    end
+end
+
+endmodule
